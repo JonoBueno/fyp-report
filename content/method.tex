@@ -1,2 +1,45 @@
 \section{Methodology}
 
+\subsection{Data}
+
+\begin{equation}
+    \mathrm{Flux}=\frac{L}{4\pi r^2}
+\end{equation}
+
+
+\subsection{Machine Learning}
+\begin{equation}
+    \mqty[
+        m_{1}\\m_{2}\\m_{3}  
+    ]
+    J
+    =
+    \mqty[
+        L_{11}&A_{11}&L_{12}&A_{12}&L_{13}&A_{13}\\
+        L_{21}&A_{21}&L_{22}&A_{22}&L_{23}&A_{23}\\
+        L_{31}&A_{31}&L_{32}&A_{32}&L_{33}&A_{33}
+    ]
+\end{equation}
+where $m$ is mass, $L$ is luminosity, $A$ is star age and $J$ is 
+
+Then using SciKit Learn
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \node (A) at (-4,0) [draw, terminal] {Masses X($n\times 1$ )}; 
+        \node (B) at (4,0) [draw, terminal] {Luminosity and Star Age Y($n \times m$)}; 
+        \node (C) at (0,-2) [draw, process] {Zeroes Matrix J ($1\times m$)};
+        \node (D) at (0,-4) [draw, process] {$\min_{J}||XJ-Y||^{2}$};
+        \node (E) at (0,-6) [draw, process] {$J=(X^{T}X)^{-1}X^{T}Y$};
+        \node (F) at (0,-8) [draw, process] {$X'J=Y'$};
+        \node (G) at (0,-10) [draw, terminal] {OUTPUT};
+        \draw[-{Latex}] (A) |- (C);
+        \draw[-{Latex}] (B) |- (C);
+        \draw[-{Latex}] (C) -- (D);
+        \draw[-{Latex}] (D) -- (E);
+        \draw[-{Latex}] (E) -- (F);
+        \draw[-{Latex}] (F) -- (G);
+    \end{tikzpicture}
+    
+\end{figure}
