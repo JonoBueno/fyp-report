@@ -15,11 +15,6 @@
 \titleformat*{\subsection}{\bfseries}
 \titleformat*{\subsubsection}{\bfseries}
 
-\let\oldsection\section% Store \section
-\renewcommand{\section}{% Update \section
-  \renewcommand{\theequation}{\thesection.\arabic{equation}}% Update equation number
-  \oldsection}% Regular \section
-
 \titlecontents{figure}[0pt]{}{Figure \thecontentslabel: }{}{\titlerule*[9pt]{.}\contentspage}
 \titlecontents{table}[0pt]{}{Table \thecontentslabel: }{}{\titlerule*[9pt]{.}\contentspage}
 \counterwithin{figure}{section}
@@ -27,7 +22,7 @@
 
 \usepackage{graphicx, setspace, multicol, booktabs, array, tikz, fancyhdr}
 \usepackage{caption, subcaption, float, enumitem, blindtext}
-\usepackage{physics, siunitx, flowchart}
+\usepackage{amsmath, physics, siunitx, flowchart}
 \usepackage[]{apacite}
 
 \fancyhead{}
@@ -40,6 +35,7 @@
 \setkeys{Gin}{width=\linewidth,height=0.2\textheight,keepaspectratio}
 \captionsetup{width=0.8\textwidth} %, font=bf}
 \usetikzlibrary{arrows.meta}
+\numberwithin{equation}{section}
 
 % distance between floats
 \setlength{\textfloatsep}{1cm plus 1.0pt minus 1.0pt}
@@ -123,8 +119,6 @@
 \input{content/method.tex}
 \clearpage
 \input{content/results.tex}
-\clearpage
-\input{content/discussion.tex}
 \clearpage
 \input{content/conclusion.tex}
 \clearpage

@@ -2,9 +2,14 @@
 
 \subsection{Stellar Model}
 
-A stellar model is a mathematical model that describes a star structure and evolution. Stellar structure models describe the internal structure of a star in detail and make predictions about the luminosity, the color and the future evolution of the star. Different classes and ages of stars have different internal structures, reflecting their elemental makeup and energy transport mechanisms. Stellar evolution is the process by which a star changes over the course of its lifetime. A stellar evolutionary model is a mathematical model that can be used to compute the evolutionary phases of a star from its formation until it becomes a remnant.
+A stellar model is a mathematical model that describes a star structure and evolution. Stellar structure models describe the internal structure of a star in detail and make predictions about the luminosity, the color and the future evolution of the star. Different classes and ages of stars have different internal structures, reflecting their elemental makeup and energy transport mechanisms. Stellar evolution is the process by which a star changes over the course of its lifetime \shortcite{bertulani-2013}. A stellar evolutionary model is a mathematical model that can be used to compute the evolutionary phases of a star from its formation until it becomes a remnant.
 
-Example of a stellar model is the Standard Solar Model (SSM) which is a mathematical model that describes the Sun as a spherical ball of gas, and it's used to test the validity of stellar evolution theory. The SSM is used to test the validity of stellar evolution theory. In fact, the only way to determine the two free parameters of the stellar evolution model, the helium abundance and the mixing length parameter (used to model convection in the Sun), are to adjust the SSM to fit the observed Sun.
+Example of a stellar model is the Standard Solar Model (SSM) which According to \shortciteA{fuller-2022} trace the evolution of the Sun from its beginning i.e. when the collapse of the primordial gas
+cloud was halted by the turn-on of thermonuclear reactions, to today, \SI{4.6}{\giga years} later, thereby predicting
+contemporary solar properties such as the composition, temperature, pressure, and sound-speed profiles and
+the neutrino fluxes. It's used to test the validity of stellar evolution theory. The SSM is used to test the validity of stellar evolution theory. In fact, the only way to determine the two free parameters of the stellar evolution model, the helium abundance and the mixing length parameter (used to model convection in the Sun), are to adjust the SSM to fit the observed Sun.
+
+Stellar modelling is often done using computational software such as "Modules for Experiments in Stellar Astrophysics" (MESA) which is a suite of open source, robust, efficient, thread-safe libraries for a wide range. It is one-dimensional stellar evolution module, MESAstar, combines many of the numerical and physics modules for simulations of multiple different scenarios in stellar evolution ranging from very low mass to massive stars, including advanced evolutionary phases\shortcite{paxton-2010}. The net module implements nuclear reaction networks and is derived from publicly available code. It includes a "basic" network of eight isotopes: $^{1}$H, $^{3}$He, $^{4}$He, $^{12}$C, $^{14}$N, $^{16}$O, $^{20}$Ne, and $^{24}$Mg, and extended networks for more detailed calculations including coverage of hot CNO reactions, $\alpha$-capture chains. This reaction rates can then be used to calculate data for the neutrinos.
 
 \subsection{Neutrino}
 
@@ -38,8 +43,14 @@ Most of them produce neutrinos through $\beta$ decays and electron(positron) cap
 that produce $\nu$.
 
 And unlike most other particles which are charged neutrinos can be assumed to come directly from their source as they are not deflected by magnetic field and unlike photons, neutrinos weakly interact making them able to pass through matter easily, the interaction length of a 1-TeV neutrino is about 2.5 million kilometers of water, or \SI{250}{\kilo\tonne\per\centi\meter\squared}, whereas high-energy photons are blocked by a few hundred \SI{}{\gram\per\centi\meter\squared} \shortcite{barenboim-2003}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{assets/GUNS.png}
+	\caption{Grand Unified Neutrino Spectrum.}
+	\label{Graph:Guns}
+\end{figure}
 
-Graph 1 \shortcite{vitagliano-2020} shows the fluxes from different neutrino sources. The range of energy for different sources is quite huge, spanning over 24 orders of magnitude. 
+Figure~\ref{Graph:Guns} \shortcite{vitagliano-2020} shows the fluxes from different neutrino sources. The range of energy for different sources is quite huge, spanning over 24 orders of magnitude. 
 
 \subsection{Solar Neutrino}
 The sun through the thermonuclear fusion reaction produces a huge amount of e with energy the order of 1MeV. Since neutrino interaction with matter is weak, almost all the neutrino produced in the core goes out from the sun. The earth receives about \SI{6e10}{\centi\per\meter\squared\second} flux of solar neutrinos. For the sun 2.3\% of its nuclear energy production is in the form of MeV range electron neutrinos \shortcite{giunti-2007}. This comes from the effective nuclear reaction 
@@ -48,29 +59,105 @@ The sun through the thermonuclear fusion reaction produces a huge amount of e wi
 \end{equation}
 Which comes from several reaction chains and cycles \shortcite{vitagliano-2020}.
 
-Table 2 \shortcite{vitagliano-2020} shows the different reactions that produce neutrinos that can be detected on earth that the sun produces in its thermonuclear process. While table 3 \shortcite{rosso-2018} shows the expectation of the solar neutrino flux from each branch coming to earth. Referring to table Graph 1, we can see the shape of the flux in a solid blue line labelled ``Solar (nuclear)''.
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+\begin{table}[H]
+	\centering
+	\captionsetup{width=\textwidth}
+	\caption{Reaction that produce neutrino in in the sun.}
+	\includegraphics[width=\textwidth]{assets/ReactionProd.png}
+	\label{table:RNeu}
+\end{table}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.45\textwidth}
+	\begin{table}[H]
+	\centering
+	\captionsetup{width=\textwidth}
+	\caption{Expected neutrino fluxes.}
+	\includegraphics[width=\textwidth]{assets/SSMexpect.png}
+	\label{table:SSMflux}
+\end{table}
+\end{minipage}
+
+Table\ref{table:RNeu} \shortcite{vitagliano-2020} shows the different reactions that produce neutrinos that can be detected on earth that the sun produces in its thermonuclear process. While table\ref{table:SSMflux} \shortcite{rosso-2018} shows the expectation of the solar neutrino flux from each branch coming to earth. Referring to table Graph 1, we can see the shape of the flux in a solid blue line labelled ``Solar (nuclear)''.
 
 \subsection{Theoretical vs Experimental}
 
 \subsubsection{Theoretical}
-For the theoretical side of stellar physics, most of them are done in doing stellar modelling to predict structures and evolution of certain mass stars. Example of theoretical work done in neutrino is Stellar Neutrino Emission across the Mass–Metallicity Plane done by \shortcite{Farag_2020} where they explore neutrino emission from nonrotating, single-star models across six initial metallicities and 70 initial masses from the zero-age main sequence to the final fate. The data produced in the model are used in this research in order to train the model.
+For the theoretical side of stellar physics, most of them are done in doing stellar modelling to predict structures and evolution of certain mass stars. Example of theoretical work done in neutrino is Stellar Neutrino Emission across the Mass–Metallicity Plane done by \shortcite{Farag_2020} where they explore neutrino emission from nonrotating, single-star models across six initial metallicities and 70 initial masses from the zero-age main sequence to the final fate shown in Graph~\ref{Graph:Lcurve} below. The data produced in the model are used in this research in order to train the model.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{assets/FaragLA.png}
+	\caption{Light curve for photons(left) and neutrinos(right).}
+	\label{Graph:Lcurve}
+\end{figure}
 
 Since the time and computational power needed to run even one model is quite arduous, by using machine learning, the gap between the modelled grid can be predicted using machine learning.
 
 \subsubsection{Experimental}
 Due to neutrinos having an almost negligible mass and interact weakly with matter, the experiments that are required to detect them are usually done on a large scale in the range of km3 which can be setback by technological challenges \shortcite{ADDAZI2022103948}. Notable experiments include Super Kamiokande in Japan, the Sudbury Neutrino Observatory (SNO) in Canada, and the Jiangmen Underground Neutrino Observatory (JUNO) in China. Data from these experiments can validate the prediction obtained from a machine learning model.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{assets/pictKam.jpg}
+	\caption{A stainless-steel tank, 39.3m diameter and 41.4m tall, filled with 50,000 tons of water. About 13,000 photo-multipliers are installed on the tank wall \protect\cite{SuperK}.
+	}
+	\label{fig:SKMK}
+\end{figure}
 
 \subsection{Current Works}
+Dense neural network was proposed by \shortciteA{kopp2024improvingneutrinoenergyreconstruction} to estimate kinematic variable that cannot be observed directly in a neutrino interaction final state. The network was trained on simulated data and the DNN manage to predict the true neutrino energy based on observable components of the interactions. 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{assets/DNNmachinelearning.png}
+	\caption{Top: Fractional neutrino energy resolution $\sigma (E_{\nu})/E_{\nu}$. Bottom: Reconstruction bias for the DNN and the calorimetric method. 
+	}
+	\label{graph:DNN}
+\end{figure}
 
+In the top of Graph~\ref{graph:DNN} it shows fractional neutrino energy resolution $\sigma (E_{\nu})/E_{\nu}$ as a function of neutrino energy with DNN based analyses with no information on final-state neutrons in solid purple, with limited information on the neutron energy in dashed purple, and with information on the neutron energy and direction in dotted purple. For comparison, they also include the energy resolutions anticipated in the DUNE CDR and TDR simulations in magenta, and the resolution of a simple calorimetric method assuming invisible neutrons in gray. In the bottom part we can see the reconstruction bias for the DNN compared to the calorimetric method. DNNs significantly outperform conventional approaches for energy reconstruction. When information on the energy of final-state neutrons is given, the improvement at high energies is  a factor of two.
 
 \subsection{Machine Learning}
 
 Machine learning has been on the rise rapidly and can potentially revolutionize how we do sciences, including physics. According to \shortciteA{rodrigues-2023} even though machine learning can help solve fundamental problems in physics, many physicists still do not recognise the importance of these techniques. In physics, machine learning is often used in settings with complex problems and lots of data like in the large hadron collider (LHC) experiments where the data can reach up to ten of thousands of petabytes per year. 
 
-Figure 2: Supervise machine learning pipeline
-In Figure 2 \shortcite{rodrigues-2023}, usually in supervised learning 80\% of data is used to train the model while 20\% is for testing the model.
-In research done by \shortcite{niu-2019}, by using Bayesian neural network (BNN) which is a machine learning technique, they manage to get results that well reproduce the experimental data with very high accuracy and provide reasonable uncertainty in half-life prediction as shown in Figure 3 compared to prediction done using calculation.  
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{assets/SLpipe.png}
+	\caption{Supervise learning pipeline.}
+	\label{fig:SLP}
+\end{figure}
 
-Figure 3: $\beta$ decay half-life of Ni isotopes
+In Figure~\ref{fig:SLP} \shortcite{rodrigues-2023}, usually in supervised learning 80\% of data is used to train the model while 20\% is for testing the model.
+In research done by \shortcite{niu-2019}, by using Bayesian neural network (BNN) which is a machine learning technique, they manage to get results that well reproduce the experimental data with very high accuracy and provide reasonable uncertainty in half-life prediction as shown in Figure~\ref{fig:NNcon} compared to prediction done using calculation.  
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{assets/NNcon.png}
+	\caption{$\beta$ decay half-life of Ni isotopes.}
+	\label{fig:NNcon}
+\end{figure}
+
 Where the experimental values in NUBASE2016 are denoted by spheres. The half-life predictions with calculation are shown by the dotted line, and their counterparts improved by BNN-I2 and BNN-I4 approaches, and their uncertainties are shown by vertical line hatched region and green hatched region, respectively. The mean predicted half-lives of BNN-I4 approach are marked by the dashed line.
+
+\subsection{Linear Regression}
+Least squares is a regression analysis that does parameter estimation based on finding the minimum of the sum of the squares of the residuals. Linear least square can be used when there is a linear combination of parameters:
+\begin{equation}
+	Y(x,\beta)=\sum_{j=1}^{m}\beta_{j}X_{j}
+\end{equation}
+when letting the X and Y variables as matrices, the least square can be computed as follow:
+\begin{equation}
+	L(D,\beta)=||Y-X\beta||^{2}
+	=(Y-X\beta)^{T}(Y-X\beta)
+	=Y^{T}Y-X^{T}Y\beta -X^{T}Y\beta +X^{T}X\beta^{2}
+\end{equation}
+where D is the set of all data. The gradient of the loss is then:
+\begin{equation}
+	\frac{\delta L(D,\beta)}{\delta\beta}=
+	\frac{\delta Y^{T}Y-X^{T}Y\beta -X^{T}Y\beta +X^{T}X\beta^{2}}{\delta\beta}=2X^{T}Y+2X^{T}X\beta
+\end{equation}
+setting the gradient to zero then give us:
+\begin{equation}
+	\hat{\beta}=(X^{T}X)^{-1}X^{T}Y
+	\label{Eq:leastsq}
+\end{equation}
+where $\hat{\beta}$ is the least square gradient.
