@@ -17,9 +17,7 @@ Sci Kit Learn was used, specifically the Linear Regression module:
     y=\beta_{0}x_0+\beta_{1}x_1+\beta_{2}x_2+\beta_{3}x_3+...+\beta_{n}x_n
 \end{equation}
 where 
-$y$ is the independent variables 
-$\beta_0$ is the intercept 
-$\beta_{1}, \beta_{2}, \beta_{3},..., \beta_{n}$ is the coefficient. 
+$y$ is the independent variables, $\beta_0, \beta_{1}, \beta_{2}, \beta_{3},..., \beta_{n}$ is the coefficient. 
 
 The basis of linear regression is the same as $y= mx+c$ but sklearn used more coefficients to predict the model. Linear regression estimate  coefficient such that the sum of error is very small ~  $10^{-4}$ (the tolerance adopted by sklearn). This method is also known as the least square method.
 
@@ -65,4 +63,9 @@ Equation\ref{Eq:matrices} is the representation on how the data was arranged in 
 
 Figure\ref{fig:flow} shows the flow of how the code does the linear regression. The code will take input Masses in the form of X$(n\times1)$ matrix and Luminosity and Star Age as Y$(n\times m)$ matrix. The code will then generate a zeros matrix J$(1\times m)$. The J will then be calculated using Equation\ref{Eq:leastsq} and then used in prediction.
 
+\begin{equation}
+    e=\sqrt{(x_p-x_g)^2+(y_p-y_g)^2}
+    \label{Eq:er}
+\end{equation}
 
+Then using the Equation~\ref{Eq:er}, the error was calculated in term of the offset between predicted and grid data per mass.
