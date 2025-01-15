@@ -1,14 +1,11 @@
 \section{Methodology}
 
 \subsection{Data}
+ 
 
-\begin{equation}
-    \frac{dL_\nu}{dM_{r}}=\epsilon_{\nu}(\rho,T)
-\end{equation}
+The data used was taken from \shortcite{farag-2023data} which uses a mesa stellar evolution code that model the evolution from hydrogen burning all the way up to triple alpha burning stage.Data that was used in training the model are from 0.2 to 3 solar masses. The data is then separated into several section of linearity as shown below to minimise error:
+0.2-0.4, 0.5-1.1, 1.2-1.4, 1.5-1.9, 2-2.3, 2.4-3.0
 
-\begin{equation}
-    \mathrm{Flux}=\frac{L}{4\pi r^2}
-\end{equation}
 
 \begin{figure}[H]
 	\centering
@@ -17,6 +14,8 @@
 	\label{fig:raw}
 \end{figure}
 
+Figure~\ref{fig:raw}
+shows the raw data from the evolution code. The data was then cut to only include the hydrogen burning part for the linear regression.
 
 \subsection{Machine Learning}
 Sci Kit Learn was used, specifically the Linear Regression module:
@@ -76,3 +75,11 @@ Figure~\ref{fig:flow} shows the flow of how the code does the linear regression.
 \end{equation}
 
 Then using the Equation~\ref{Eq:er}, the error was calculated in term of the offset between predicted and grid data per mass.
+
+\begin{equation}
+    \mathrm{Flux}=\frac{L}{4\pi r^2}
+    \label{Eq:fluxcal}
+\end{equation}
+
+Using the prediction from the linear regression, we can then use the Formula~\ref{Eq:fluxcal} to calculate for flux of distant low mass star of known mass and distant from earth.
+ 
