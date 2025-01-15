@@ -4,12 +4,12 @@
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{\textwidth}
-		\includegraphics[width=\textwidth,height=0.5\textheight]{assets/output1singlemodel.png}
+		\includegraphics[width=0.9\textwidth,height=0.5\textheight]{assets/output1singlemodel.png}
 		\caption{Sun $1M\odot$ Single Testing Data.}
 		\label{fig:SunTesta}	
 	\end{subfigure}
 	\begin{subfigure}{\textwidth}
-		\includegraphics[width=\textwidth,height=0.5\textheight]{assets/output1.png}
+		\includegraphics[width=0.9\textwidth,height=0.5\textheight]{assets/output1.png}
 		\caption{Sun $1M\odot$ Multi Model($0.5-1.1M_\odot$) Testing Data.}
 		\label{fig:SunTestb}	
 	\end{subfigure}
@@ -77,6 +77,48 @@ After doing the same analysis on the multi model, we get around the same shape a
 
 \subsection{Prediction of Flux}
 
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=\textwidth,height=0.4\textheight]{assets/predtauceti.png}
+		\caption{Prediction for $\tau$ ceti $0.78 M\odot$.}
+		\label{fig:tau}	
+	\end{subfigure}
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=\textwidth,height=0.4\textheight]{assets/predsirius.png}
+		\caption{Prediction for Sirius $2.06 M\odot$.}
+		\label{fig:Sirius}
+	\end{subfigure}
+	\caption(Prediction of different Stars Luminosity and Ages Using Multi Model)
+	\label{fig:predict}
+\end{figure}            
+\begin{figure}[H]
+
+\end{figure}
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.35\textheight]{assets/fluxsun.png}
+	\caption{Prediction for Flux of Sun $1 M\odot$.}
+	\label{fig:predicted flux sun}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.35\textheight]{assets/fluxtau.png}
+	\caption{Prediction for flux of $\tau$ ceti $0.78 M\odot$.}
+	\label{fig:predicted flux tau}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.35\textheight]{assets/fluxsirius.png}
+	\caption{Prediction for flux of Sirius $2.06 M\odot$.}
+	\label{fig:predicted flux sirius}
+\end{figure}
+
 \begin{table}[H]
     \centering
 	\caption{Stars with their mass and distance.}
@@ -91,45 +133,8 @@ After doing the same analysis on the multi model, we get around the same shape a
 		\bottomrule
 	\end{tabular}
 \end{table}
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}{\textwidth}
-		\centering
-		\includegraphics[width=\textwidth,height=0.5\textheight]{assets/predtauceti.png}
-		\caption{Prediction for $\tau$ ceti $0.78 M\odot$.}
-		\label{fig:tau}	
-	\end{subfigure}
-	\begin{subfigure}{\textwidth}
-		\includegraphics[width=\textwidth,height=0.5\textheight]{assets/predsirius.png}
-		\caption{Prediction for Sirius $2.06 M\odot$.}
-		\label{fig:Sirius}
-	\end{subfigure}
-	\caption(Prediction of different Stars Luminosity and Ages Using Multi Model)
-	\label{fig:predict}
-\end{figure}            
-\begin{figure}[H]
 
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}{\textwidth}
-		\includegraphics[width=\textwidth,height=0.5\textheight]{assets/fluxsun.png}
-		\caption{Prediction for Flux of Sun $1 M\odot$.}
-	\end{subfigure}
-	\begin{subfigure}{\textwidth}
-		\includegraphics[width=\textwidth,height=0.5\textheight]{assets/fluxtau.png}
-		\caption{Prediction for flux of $\tau$ ceti $0.78 M\odot$.}
-	\end{subfigure}
-	\begin{subfigure}{\textwidth}
-		\includegraphics[width=\textwidth,height=0.5\textheight]{assets/fluxsirius.png}
-		\caption{Prediction for flux of Sirius $2.06 M\odot$.}
-	\end{subfigure}
-	\caption(Flux Prediction)
-	\label{fig:predicted flux}
-\end{figure}
-
-We then decide to use the multi model for prediction of flux from distant stars. We used the data in Table~\ref{tab:stars and mass} to predict flux coming from the Sun and $\tau$ ceti where the mass is the mass of the star in term of solar mass and the distance is the distance between the earth and the stars. Figure~\ref{fig:tau} shows plots of $log(l_\nu/l_\odot)$(where $l_\odot=3.828\times 10^33ergs^-1$ prediction for t ceti and sun and part of the grid of the model training for comparison. We can see that for the $\tau$ ceti with mass $0.78M_\odot$ it is where we expect it to be, which is below grid 8 and for the sun, it is the same as in Figure~\ref{fig:SunTestb}. The same can be said Sirius with mass of $2.06M_\odot$ where it is between grid 2 and 2.1. Using the prediction data we then calculate the flux for both the Sun, Sirius and $\tau$ ceti as seen in Figure~\ref{fig:predicted flux} The prediction shows that the flux coming from the sun is of 12 orders of magnitude compared to flux coming from tau ceti. When the fluxes are plotted together, the flux of $\tau$ ceti will look like it is non-existence. Though Sirius is 2 times more massive than the sun and producing more neutrino, due to the massive different in distance it the neutrino flux on earth are still small by 9 order of magnitude. This is the reason why it is so hard to detect the neutrino coming from these distant stars. 
+We then decide to use the multi model for prediction of flux from distant stars. We used the data in Table~\ref{tab:stars and mass} to predict flux coming from the Sun and $\tau$ ceti where the mass is the mass of the star in term of solar mass and the distance is the distance between the earth and the stars. Figure~\ref{fig:tau} shows plots of $log(l_\nu/l_\odot)$(where $l_\odot=3.828\times 10^33ergs^-1$ prediction for t ceti and sun and part of the grid of the model training for comparison. We can see that for the $\tau$ ceti with mass $0.78M_\odot$ it is where we expect it to be, which is below grid 8 and for the sun, it is the same as in Figure~\ref{fig:SunTestb}. The same can be said Sirius with mass of $2.06M_\odot$ where it is between grid 2 and 2.1. Using the prediction data we then calculate the flux for both the Sun, Sirius and $\tau$ ceti as seen in Figure~\ref{fig:predicted flux sun} to \ref{fig:predicted flux sirius} The prediction shows that the flux coming from the sun is of 12 orders of magnitude compared to flux coming from tau ceti. When the fluxes are plotted together, the flux of $\tau$ ceti will look like it is non-existence. Though Sirius is 2 times more massive than the sun and producing more neutrino, due to the massive different in distance it the neutrino flux on earth are still small by 9 order of magnitude. This is the reason why it is so hard to detect the neutrino coming from these distant stars. 
 
 From this we can see that linear regression can be used but it is not the best method. Even after sectioning the data, when met with data that contains huge variation it tends to fail as linear regression is very sensitive to outliers. This means that an even better method needs to be tested, especially one that can handle non-linear data especially in order to incorporate the helium burning stage into the training data in order to predict the neutrino flux coming from that stage of the star's evolution. Methods that can be tested out are neural networks as it is capable of capturing complex patterns in highly non-linear data and may be able to create a more accurate prediction model.
 
